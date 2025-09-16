@@ -12,13 +12,13 @@ export default function Routine() {
         <Table className="w-full">
           <TableHeader>
             <TableRow className="bg-accent border-b [&_th]:text-accent-foreground">
-              <TableHead className="px-6 py-3 text-left text-sm font-medium border-r">
+              <TableHead className="px-6 py-3 text-left text-xl font-medium border-r">
                 Day
               </TableHead>
               {times.map((time, index) => (
                 <TableHead
                   key={time}
-                  className={cn(`px-4 py-3 text-center text-sm font-medium min-w-[100px]`, index < times.length - 1 && 'border-r')}
+                  className={cn(`px-4 py-3 text-center text-xl font-medium min-w-[100px]`, index < times.length - 1 && 'border-r')}
                 >
                   {time}
                 </TableHead>
@@ -31,7 +31,7 @@ export default function Routine() {
 
               return (
                 <TableRow key={day}>
-                  <TableCell className="px-6 py-4 text-sm font-medium border-r bg-accent text-accent-foreground">
+                  <TableCell className="px-6 py-4 text-xl font-medium border-r bg-accent text-accent-foreground ">
                     {day}
                   </TableCell>
                   {daySchedule.map((item, index) =>
@@ -46,7 +46,8 @@ export default function Routine() {
                           <TableCell
                             key={index}
                             colSpan={item.period}
-                            className="px-4 py-4 text-center text-sm border-r"
+                            className="px-4 py-4 text-center text-xl border-r"
+
                           >
                             <Tooltip>
                               <TooltipTrigger asChild>
